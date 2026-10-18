@@ -1,0 +1,40 @@
+
+:root {
+    font-size: 62.5%;
+
+    /* padding */
+    --padding-pequeno: .5rem;
+    --padding-medio: 1rem;
+    --padding-grande: 2rem;
+
+    /* espacamento */
+    --espaco-pequeno: .5rem;
+    --espaco-medio:1rem;
+    --espaco-grande:2rem;
+
+    /* fontes */
+    --font-titulo: 'Inter', sans-serif;
+    --font-texto: 'Poppins', sans-serif;
+    
+    --fonte-pequena: .5rem;
+    --fonte-media: 1.5rem;
+    --fonte-grande: 4rem;
+
+    /* cores */
+    --fundo: #121212;
+    --card: #1E1E1E;
+    --destaque: #A855F7;
+    --destaque-foco:#8e48cf;
+    --texto: #F5F5F5;
+    --texto-secundario: #A3A3A3;
+
+    /* imagem */
+    --imagem-largura-pequena:5rem;
+    --imagem-largura-media:10rem;
+    --imagem-largiura-grande:20rem;
+
+    --imagem-altura-pequena:5vh;
+    --imagem-altura-media:10vh;
+    --imagem-altura-grande:20vh;
+    
+}
