@@ -33,6 +33,12 @@ export function criarHeaderBase(imagemCaminho) {
     home.dataset.link = 'index';
     home.href = '#';
 
+    const favoritos = document.createElement('a');
+    favoritos.classList.add('nav-base__link');
+    favoritos.textContent = 'Favoritos';
+    favoritos.dataset.link = 'favoritos';
+    favoritos.href="#";
+
     const login = document.createElement('a');
     login.classList.add('nav-base__link');
     login.id = 'destaque';
@@ -90,7 +96,7 @@ export function criarHeaderBase(imagemCaminho) {
     g3.append(path1, path2);
     svg.append(g1, g2, g3);
 
-    nav.append(home, login, barraPesquisa, svg);
+    nav.append(home,favoritos, login, barraPesquisa, svg);
     header.append(logo, nav);
 
     return header;

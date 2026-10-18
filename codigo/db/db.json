@@ -1,0 +1,26 @@
+{
+    "bandas":[
+        {
+        "nome":"Beatles",
+        "imagem":"https://www.postery.com/pt-pt/__media-service/orig/product/4227-the-beatles-1.jpg",
+        "integrantes":[
+            {"nome":"Paul McCartney"},
+            {"nome":"John Lennon"},
+            {"nome":"George Harrison"},
+            {"nome":"Ringo Starr"},
+            {"nome":"Pete Best"},
+            {"nome":"Stuart Sutcliffe"}],
+        "generoMusica":"rock e pop",
+        "anoFormacao":"1960",
+        
+        "albuns":[
+            {"nome":"Please Please Me"},
+            {"nome":"With the Beatles"},
+            {"nome":"A Hard Day's Night"},
+            {"nome":"Beatles for Sale"},
+            {"nome":"Help!"},
+            {"nome":"..."}
+    ]
+}
+]
+}

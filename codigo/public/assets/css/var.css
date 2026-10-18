@@ -30,11 +30,19 @@
 
     /* imagem */
     --imagem-largura-pequena:5rem;
-    --imagem-largura-media:10rem;
-    --imagem-largiura-grande:20rem;
+    --imagem-largura-media:20rem;
+    --imagem-largiura-grande:30rem;
 
-    --imagem-altura-pequena:5vh;
-    --imagem-altura-media:10vh;
-    --imagem-altura-grande:20vh;
+    --imagem-altura-pequena:5rem;
+    --imagem-altura-media:20rem;
+    --imagem-altura-grande:30rem;
     
+    /* card */
+    --card-largura-pequena:10rem;
+    --card-largura-media:20rem;
+    --card-largura-grande:30rem;
+
+    --card-altura-pequena:10vh;
+    --card-altura-media:40vh;
+    --card-altura-grande:30vh;
 }
