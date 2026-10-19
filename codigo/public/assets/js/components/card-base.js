@@ -22,8 +22,9 @@ export async function criarCardBase(caminhoJson) {
             card.style.cursor = 'pointer';
 
             card.addEventListener('click', () => {
-                window.location.href =
-                    `./modules/detalhes.html?banda=${encodeURIComponent(banda.nome)}`;
+                // window.location.href =
+                //     `./modules/detalhes.html?banda=${encodeURIComponent(banda.nome)}`;
+                window.locatiom.href="./modules/detalhes.html";
             });
 
             const nome = document.createElement('h2');
