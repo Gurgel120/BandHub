@@ -1,6 +1,6 @@
 import { criarCardBase } from "../components/card-base.js";
 
-const caminhoJson = "/db/db.json";
+const caminhoJson = "BandHub/db/db.json";
 
 const containers = document.querySelectorAll("[data-type]");
 

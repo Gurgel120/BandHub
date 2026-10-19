@@ -16,5 +16,3 @@ Nome, integrantes, gênero musical, ano de formação, albuns
 
 # API pública que poderá ser utilizada
 MusicBrainzAPI, permite consultar informações sobre artistas, bandas e gravações musicais.
-
-
