@@ -1,0 +1,14 @@
+/* Fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset */
+@import url('reset.css');
+
+/* Variáveis */
+@import url('var.css');
+
+/* base */
+@import url(base.css);
+/* Componentes */
+@import url('components/header_base.css');
+@import url(components/card_base.css);

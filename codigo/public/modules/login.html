@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/login.css">
+</head>
+
+<body>
+
+    <main class="login">
+        <a href="../../index.html" class="login__voltar">
+            &larr; Voltar para o início
+        </a>
+
+        <section class="login__card">
+            <a href="../../index.html" class="login__logo">
+                <img src="/public/assets/images/logo.png" alt="BandHub">
+            </a>
+
+            <h1 class="login__titulo">Bem-vindo de volta!</h1>
+            <p class="login__descricao">
+                Entre na sua conta e conheça novas bandas.
+            </p>
+
+            <form class="login__formulario">
+                <div class="login__campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email"
+                        required>
+                </div>
+
+                <div class="login__campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
+                        autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" class="login__botao">
+                    Entrar
+                </button>
+            </form>
+
+            <p class="login__cadastro">
+                Ainda não tem uma conta?
+                <a href="cadastroUsuario.html">Cadastre-se</a>
+            </p>
+        </section>
+
+        <p class="login__rodape">
+            Sua próxima banda favorita está aqui.
+        </p>
+    </main>
+
+</body>
+
+</html>

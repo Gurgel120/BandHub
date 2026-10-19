@@ -12,8 +12,9 @@ Sistema web de cadastro organização, e consulta de informações sobre bandas,
 Bandas
 
 # Principais informações sobre a entidade
-Nome, integrantes, gênero musical, ano de formação, prêmios, discografias
+Nome, integrantes, gênero musical, ano de formação, albuns
 
 # API pública que poderá ser utilizada
 MusicBrainzAPI, permite consultar informações sobre artistas, bandas e gravações musicais.
+
 

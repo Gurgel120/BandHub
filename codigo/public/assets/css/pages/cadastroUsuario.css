@@ -1,0 +1,189 @@
+.cadastro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-grande);
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(168, 85, 247, 0.13),
+            transparent 45%
+        ),
+        var(--fundo);
+
+    font-family: var(--font-texto);
+    color: var(--texto);
+}
+.cadastro__voltar {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+
+    color: var(--texto-secundario);
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cadastro__voltar:hover {
+    color: var(--destaque);
+}
+
+.cadastro__card {
+    width: 100%;
+    max-width: 44rem;
+    padding: 3.5rem;
+
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1.6rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.25);
+}
+
+.cadastro__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.cadastro__logo img {
+    width: 9rem;
+    max-height: 7rem;
+    object-fit: contain;
+}
+
+.cadastro__titulo {
+    font-family: var(--font-titulo);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cadastro__descricao {
+    color: var(--texto-secundario);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.cadastro__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.cadastro__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cadastro__campo label {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.cadastro__campo input {
+    width: 100%;
+    padding: 1.3rem 1.5rem;
+
+    background: var(--fundo);
+    border: 1px solid #383838;
+    border-radius: 0.8rem;
+    outline: none;
+
+    color: var(--texto);
+    font-family: var(--font-texto);
+    font-size: 1.4rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cadastro__campo input::placeholder {
+    color: #777;
+}
+
+.cadastro__campo input:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 0.3rem rgba(168, 85, 247, 0.15);
+}
+
+.cadastro__ajuda {
+    color: var(--texto-secundario);
+    font-size: 1.2rem;
+}
+
+.cadastro__botao {
+    padding: 1.4rem;
+    margin-top: 0.5rem;
+
+    background: var(--destaque);
+    border: none;
+    border-radius: 0.8rem;
+
+    color: white;
+    font-family: var(--font-titulo);
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cadastro__botao:hover {
+    background: var(--destaque-foco);
+    transform: translateY(-0.2rem);
+}
+
+.cadastro__login {
+    margin-top: 2.5rem;
+    color: var(--texto-secundario);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.cadastro__login a {
+    color: var(--destaque);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cadastro__login a:hover {
+    text-decoration: underline;
+}
+
+.cadastro__rodape {
+    margin-top: 2.5rem;
+    color: var(--texto-secundario);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .cadastro {
+        padding: 2rem;
+    }
+
+    .cadastro__voltar {
+        position: static;
+        align-self: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .cadastro__card {
+        padding: 2.5rem 2rem;
+    }
+
+    .cadastro__titulo {
+        font-size: 2.4rem;
+    }
+}

@@ -1,0 +1,116 @@
+
+.header-base {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espaco-medio);
+    padding: var(--padding-medio);
+    background-color: var(--fundo);
+    flex-wrap: wrap;
+    background-color: #0a0a0a;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--espaco-pequeno);
+}
+.titulo__container{
+    display: flex;
+}
+
+.logo__titulo {
+    margin: 0;
+    font-family: var(--font-titulo);
+    font-size: var(--fonte-grande);
+    font-weight: bold;
+}
+.logo__titulo--primary{
+    color: var(--texto);
+}
+.logo__titulo--secondary{
+    color: var(--destaque);
+}
+.logo__imagem {
+    width: var(--imagem-largura-media);
+    height: var(--imagem-altura-media);
+    object-fit: contain;
+}
+
+
+.nav-base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-medio);
+    flex-wrap: wrap;
+}
+
+.nav-base__link {
+    display: inline-block;
+    padding: var(--padding-pequeno);
+    border-radius: 10px;
+    font-family: var(--font-texto);
+    font-size: var(--fonte-media);
+    color: var(--texto);
+    text-decoration: none;
+    transition: color 0.2s ease,
+                background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.nav-base__link:hover {
+    color: var(--destaque);
+    transform: scale(1.05);
+}
+
+.nav-base__link:focus-visible {
+    color: var(--destaque);
+    outline: 2px solid var(--destaque);
+    outline-offset: 3px;
+}
+
+
+#destaque {
+    background-color: var(--destaque);
+    color: #000;
+}
+
+#destaque:hover,
+#destaque:focus-visible {
+    background-color: var(--destaque-foco);
+    color: #000;
+}
+
+
+@media (max-width: 768px) {
+    .header-base {
+        justify-content: center;
+    }
+
+    .nav-base {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-base__pesquisar {
+        flex: 1 1 18rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo__titulo {
+        font-size: var(--fonte-media);
+    }
+
+    .logo__imagem {
+        max-width: 5rem;
+        max-height: 5rem;
+    }
+
+    .nav-base {
+        gap: var(--espaco-pequeno);
+    }
+}

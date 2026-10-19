@@ -1,0 +1,227 @@
+.cadastro-banda {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 3rem 2rem 5rem;
+    background:
+        radial-gradient(circle at top,
+            rgba(168, 85, 247, 0.1),
+            transparent 35%),
+        var(--fundo);
+    color: var(--texto);
+    font-family: var(--font-texto);
+}
+
+.cadastro-banda__voltar {
+    display: inline-block;
+    margin-bottom: 3rem;
+    color: var(--texto-secundario);
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cadastro-banda__voltar:hover {
+    color: var(--destaque);
+}
+
+.cadastro-banda__conteudo {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.cadastro-banda__cabecalho {
+    margin-bottom: 3rem;
+}
+
+.cadastro-banda__etiqueta {
+    color: var(--destaque);
+    font-family: var(--font-titulo);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+}
+
+.cadastro-banda__titulo {
+    margin: 1rem 0;
+    font-family: var(--font-titulo);
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.cadastro-banda__descricao {
+    max-width: 60rem;
+    color: var(--texto-secundario);
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+.cadastro-banda__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cadastro-banda__secao {
+    min-width: 0;
+    padding: 2.5rem;
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.2rem;
+}
+
+.cadastro-banda__secao-titulo {
+    padding: 0 1rem 0 0;
+    color: var(--texto);
+    font-family: var(--font-titulo);
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.cadastro-banda__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.cadastro-banda__campo label,
+.cadastro-banda__item label {
+    color: var(--texto);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.cadastro-banda__campo input,
+.cadastro-banda__item input {
+    width: 100%;
+    min-width: 0;
+    padding: 1.3rem 1.4rem;
+    background: var(--fundo);
+    border: 1px solid #383838;
+    border-radius: 0.8rem;
+    outline: none;
+    color: var(--texto);
+    font-family: var(--font-texto);
+    font-size: 1.4rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cadastro-banda__campo input::placeholder,
+.cadastro-banda__item input::placeholder {
+    color: #777;
+}
+
+.cadastro-banda__campo input:focus,
+.cadastro-banda__item input:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 0.3rem rgba(168, 85, 247, 0.15);
+}
+
+.cadastro-banda__ajuda {
+    margin-top: 1rem;
+    color: var(--texto-secundario);
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.cadastro-banda__linha {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.cadastro-banda__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.cadastro-banda__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cadastro-banda__acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cadastro-banda__botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.8rem;
+    padding: 1.3rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.8rem;
+    font-family: var(--font-titulo);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cadastro-banda__botao:hover {
+    transform: translateY(-0.2rem);
+}
+
+.cadastro-banda__botao--secundario {
+    background: transparent;
+    border-color: #383838;
+    color: var(--texto);
+}
+
+.cadastro-banda__botao--secundario:hover {
+    border-color: var(--texto-secundario);
+}
+
+.cadastro-banda__botao--principal {
+    background: var(--destaque);
+    color: white;
+}
+
+.cadastro-banda__botao--principal:hover {
+    background: var(--destaque-foco);
+}
+
+@media (max-width: 600px) {
+    .cadastro-banda {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .cadastro-banda__titulo {
+        font-size: 2.8rem;
+    }
+
+    .cadastro-banda__secao {
+        padding: 2rem 1.5rem;
+    }
+
+    .cadastro-banda__linha {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .cadastro-banda__acoes {
+        flex-direction: column-reverse;
+    }
+
+    .cadastro-banda__botao {
+        width: 100%;
+    }
+}
