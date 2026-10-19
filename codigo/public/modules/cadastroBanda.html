@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar banda</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/cadastroBanda.css">
+</head>
+
+<body>
+
+    <main class="cadastro-banda">
+        <a href="../../index.html" class="cadastro-banda__voltar">
+            &larr; Voltar para o início
+        </a>
+
+        <section class="cadastro-banda__conteudo">
+
+            <header class="cadastro-banda__cabecalho">
+                <span class="cadastro-banda__etiqueta">BANDHUB / CONTRIBUIÇÃO</span>
+                <h1 class="cadastro-banda__titulo">Cadastrar banda</h1>
+                <p class="cadastro-banda__descricao">
+                    Compartilhe uma banda com a comunidade e ajude a expandir
+                    nosso catálogo musical.
+                </p>
+            </header>
+
+            <form class="cadastro-banda__formulario">
+
+                <fieldset class="cadastro-banda__secao">
+                    <legend class="cadastro-banda__secao-titulo">
+                        Informações da banda
+                    </legend>
+
+                    <div class="cadastro-banda__campo">
+                        <label for="nome">Nome da banda</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex.: The Beatles" required>
+                    </div>
+
+                    <div class="cadastro-banda__campo">
+                        <label for="imagem">Link da imagem</label>
+                        <input type="url" id="imagem" name="imagem" placeholder="https://exemplo.com/imagem.jpg"
+                            required>
+                        <p class="cadastro-banda__ajuda">
+                            Cole o endereço direto de uma imagem da banda.
+                        </p>
+                    </div>
+
+                    <div class="cadastro-banda__linha">
+                        <div class="cadastro-banda__campo">
+                            <label for="generoMusica">Gênero musical</label>
+                            <input type="text" id="generoMusica" name="generoMusica" placeholder="Ex.: Rock e pop"
+                                required>
+                        </div>
+
+                        <div class="cadastro-banda__campo">
+                            <label for="anoFormacao">Ano de formação</label>
+                            <input type="number" id="anoFormacao" name="anoFormacao" placeholder="Ex.: 1960" min="1800"
+                                max="2100" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="cadastro-banda__secao">
+                    <legend class="cadastro-banda__secao-titulo">
+                        Integrantes
+                    </legend>
+
+                    <p class="cadastro-banda__ajuda">
+                        Informe os integrantes da banda. Você pode deixar
+                        os campos adicionais vazios.
+                    </p>
+
+                    <div class="cadastro-banda__lista">
+                        <div class="cadastro-banda__item">
+                            <label for="integrante-1">Integrante 1</label>
+                            <input type="text" id="integrante-1" name="integrantes[]" placeholder="Nome do integrante">
+                        </div>
+
+                        <div class="cadastro-banda__item">
+                            <label for="integrante-2">Integrante 2</label>
+                            <input type="text" id="integrante-2" name="integrantes[]" placeholder="Nome do integrante">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="cadastro-banda__secao">
+                    <legend class="cadastro-banda__secao-titulo">
+                        Álbuns
+                    </legend>
+
+                    <p class="cadastro-banda__ajuda">
+                        Adicione os álbuns lançados pela banda.
+                    </p>
+
+                    <div class="cadastro-banda__lista">
+                        <div class="cadastro-banda__item">
+                            <label for="album-1">Álbum 1</label>
+                            <input type="text" id="album-1" name="albuns[]" placeholder="Nome do álbum">
+                        </div>
+
+                        <div class="cadastro-banda__item">
+                            <label for="album-2">Álbum 2</label>
+                            <input type="text" id="album-2" name="albuns[]" placeholder="Nome do álbum">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="cadastro-banda__acoes">
+                    <a href="/index.html" class="cadastro-banda__botao cadastro-banda__botao--secundario">
+                        Cancelar
+                    </a>
+
+                    <button type="submit" class="cadastro-banda__botao cadastro-banda__botao--principal">
+                        Cadastrar banda
+                    </button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -8,17 +8,18 @@ export async function criarCardBase(caminhoJson) {
 
     function Main(dados) {
         const container = document.createElement('div');
+        container.classList.add('bandas-destaque__lista')
 
         dados.bandas.forEach(banda => {
             const card = document.createElement('article');
             card.classList.add('card-base');
 
-            // Torna o card clicável
             card.style.cursor = 'pointer';
 
             card.addEventListener('click', () => {
-                window.location.href =
-                    `/modules/detalhes.html?banda=${encodeURIComponent(banda.nome)}`;
+                // window.location.href =
+                //     `/modules/detalhes.html?banda=${encodeURIComponent(banda.nome)}`;
+                window.location.href='public/modules/detalhes.html';
             });
 
             const nome = document.createElement('h1');

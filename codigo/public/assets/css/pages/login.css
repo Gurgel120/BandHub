@@ -1,0 +1,187 @@
+.login {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-grande);
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(168, 85, 247, 0.13),
+            transparent 45%
+        ),
+        var(--fundo);
+    font-family: var(--font-texto);
+    color: var(--texto);
+}
+
+.login__voltar {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    color: var(--texto-secundario);
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.login__voltar:hover {
+    color: var(--destaque);
+}
+
+.login__card {
+    width: 100%;
+    max-width: 42rem;
+    padding: 4rem;
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1.6rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.25);
+}
+
+.login__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.login__logo img {
+    width: 10rem;
+    max-height: 8rem;
+    object-fit: contain;
+}
+
+.login__titulo {
+    font-family: var(--font-titulo);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login__descricao {
+    color: var(--texto-secundario);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.login__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.login__campo label {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.login__campo input {
+    width: 100%;
+    padding: 1.4rem 1.5rem;
+    background: var(--fundo);
+    border: 1px solid #383838;
+    border-radius: 0.8rem;
+    outline: none;
+    color: var(--texto);
+    font-family: var(--font-texto);
+    font-size: 1.4rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login__campo input::placeholder {
+    color: #777;
+}
+
+.login__campo input:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 0.3rem rgba(168, 85, 247, 0.15);
+}
+
+.login__esqueci {
+    align-self: flex-end;
+    margin-top: -1rem;
+    color: var(--destaque);
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.login__esqueci:hover {
+    text-decoration: underline;
+}
+
+.login__botao {
+    padding: 1.4rem;
+    margin-top: 0.5rem;
+    background: var(--destaque);
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    font-family: var(--font-titulo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.login__botao:hover {
+    background: var(--destaque-foco);
+    transform: translateY(-0.2rem);
+}
+
+.login__cadastro {
+    margin-top: 2.5rem;
+    color: var(--texto-secundario);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.login__cadastro a {
+    color: var(--destaque);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login__cadastro a:hover {
+    text-decoration: underline;
+}
+
+.login__rodape {
+    margin-top: 2.5rem;
+    color: var(--texto-secundario);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .login {
+        padding: 2rem;
+    }
+
+    .login__voltar {
+        position: static;
+        align-self: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .login__card {
+        padding: 2.5rem 2rem;
+    }
+
+    .login__titulo {
+        font-size: 2.4rem;
+    }
+}
