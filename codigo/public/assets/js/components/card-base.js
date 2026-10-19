@@ -22,7 +22,7 @@ export async function criarCardBase(caminhoJson) {
             card.style.cursor = 'pointer';
 
             card.addEventListener('click', () => {
-                window.locatiom.href="./modules/detalhes.html";
+                window.location.href="./modules/detalhes.html";
             });
 
             const nome = document.createElement('h2');
