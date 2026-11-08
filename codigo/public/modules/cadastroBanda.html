@@ -34,6 +34,34 @@
 
                 <fieldset class="cadastro-banda__secao">
                     <legend class="cadastro-banda__secao-titulo">
+                        Pesquisar banda
+                    </legend>
+
+                    <p class="cadastro-banda__ajuda">
+                        Pesquise uma banda no MusicBrainz para preencher automaticamente
+                        algumas informações do cadastro.
+                    </p>
+
+                    <div class="cadastro-banda__campo">
+                        <label for="pesquisa-artista">Nome da banda</label>
+
+                        <div class="cadastro-banda__linha">
+                            <input type="search" id="pesquisa-artista" placeholder="Ex.: The Beatles">
+
+                            <button type="button" id="botao-pesquisar"
+                                class="cadastro-banda__botao cadastro-banda__botao--secundario">
+                                Pesquisar
+                            </button>
+                        </div>
+                    </div>
+
+                    <p id="mensagem-pesquisa" class="cadastro-banda__ajuda" aria-live="polite"></p>
+
+                    <div id="resultados-pesquisa"></div>
+                </fieldset>
+
+                <fieldset class="cadastro-banda__secao">
+                    <legend class="cadastro-banda__secao-titulo">
                         Informações da banda
                     </legend>
 
