@@ -2,7 +2,6 @@ export function criarHeaderBase() {
     const header = document.createElement("header");
     header.classList.add("header-base");
 
-    // Logo
     const logo = document.createElement("div");
     logo.classList.add("logo");
 
@@ -25,15 +24,30 @@ export function criarHeaderBase() {
     tituloContainer.append(titulo1, titulo2);
     logo.append(tituloContainer, imagem);
 
-    // Navegação
     const nav = document.createElement("nav");
     nav.classList.add("nav-base");
 
     const links = [
-        { texto: "Home", destino: "/BandHub/index.html", identificador: "index" },
-        { texto: "Favoritos", destino: "/BandHub/public/modules/favoritos.html", identificador: "favoritos" },
-        { texto: "Fazer login", destino: "/BandHub/public/modules/login.html", identificador: "login" },
-        { texto: "Cadastrar-se", destino: "/BandHub/public/modules/cadastroUsuario.html", identificador: "cadastro" }
+        {
+            texto: "Home",
+            destino: "/BandHub/index.html",
+            identificador: "index"
+        },
+        {
+            texto: "Favoritos",
+            destino: "/BandHub/public/modules/favoritos.html",
+            identificador: "favoritos"
+        },
+        {
+            texto: "Fazer login",
+            destino: "/BandHub/public/modules/login.html",
+            identificador: "login"
+        },
+        {
+            texto: "Cadastrar-se",
+            destino: "/BandHub/public/modules/cadastroUsuario.html",
+            identificador: "cadastro"
+        }
     ];
 
     links.forEach(item => {
