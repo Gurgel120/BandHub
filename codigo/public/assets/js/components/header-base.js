@@ -1,4 +1,6 @@
 export function criarHeaderBase() {
+    const BASE_URL = new URL("../../../../", import.meta.url);
+
     const header = document.createElement("header");
     header.classList.add("header-base");
 
@@ -18,7 +20,7 @@ export function criarHeaderBase() {
 
     const imagem = document.createElement("img");
     imagem.classList.add("logo__imagem");
-    imagem.src = "/BandHub/public/assets/images/logo.png";
+    imagem.src = new URL("public/assets/images/logo.png", BASE_URL).href;
     imagem.alt = "Logo do site";
 
     tituloContainer.append(titulo1, titulo2);
@@ -30,22 +32,22 @@ export function criarHeaderBase() {
     const links = [
         {
             texto: "Home",
-            destino: "/BandHub/index.html",
+            destino: "index.html",
             identificador: "index"
         },
         {
             texto: "Favoritos",
-            destino: "/BandHub/public/modules/favoritos.html",
+            destino: "public/modules/favoritos.html",
             identificador: "favoritos"
         },
         {
             texto: "Fazer login",
-            destino: "/BandHub/public/modules/login.html",
+            destino: "public/modules/login.html",
             identificador: "login"
         },
         {
             texto: "Cadastrar-se",
-            destino: "/BandHub/public/modules/cadastroUsuario.html",
+            destino: "public/modules/cadastroUsuario.html",
             identificador: "cadastro"
         }
     ];
@@ -55,7 +57,7 @@ export function criarHeaderBase() {
 
         link.classList.add("nav-base__link");
         link.textContent = item.texto;
-        link.href = item.destino;
+        link.href = new URL(item.destino, BASE_URL).href;
         link.dataset.link = item.identificador;
 
         if (item.identificador === "cadastro") {
