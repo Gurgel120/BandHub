@@ -199,6 +199,25 @@
     background: var(--destaque-foco);
 }
 
+
+#resultados-pesquisa {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+#resultados-pesquisa button {
+    width: 100%;
+    text-align: left;
+}
+
+#botao-pesquisar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
 @media (max-width: 600px) {
     .cadastro-banda {
         padding: 2rem 1.5rem 3rem;
