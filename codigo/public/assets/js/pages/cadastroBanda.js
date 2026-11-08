@@ -18,7 +18,6 @@ const listaAlbuns = document.querySelector("#albuns");
 const titulo = document.querySelector(".cadastro-banda__titulo");
 const botaoEnviar = formulario.querySelector('button[type="submit"]');
 
-// Elementos da pesquisa
 const campoPesquisa = document.querySelector("#pesquisa-artista");
 const botaoPesquisa = document.querySelector("#botao-pesquisar");
 const mensagemPesquisa = document.querySelector("#mensagem-pesquisa");
@@ -36,9 +35,6 @@ if (id && !bandaExistente) {
     window.location.href = "../../index.html";
 }
 
-// ========================================
-// CAMPOS DINÂMICOS
-// ========================================
 
 function criarCampo(lista, tipo, numero, valor = "") {
     const novoCampo = document.createElement("div");
@@ -89,9 +85,6 @@ function adicionarCampoAutomatico(lista, tipo) {
     });
 }
 
-// ========================================
-// FUNÇÕES AUXILIARES
-// ========================================
 
 function normalizarTexto(texto) {
     return String(texto || "")
@@ -100,10 +93,6 @@ function normalizarTexto(texto) {
         .toLowerCase()
         .trim();
 }
-
-// ========================================
-// MUSICBRAINZ — FONTE PRINCIPAL
-// ========================================
 
 let ultimaConsulta = 0;
 
@@ -255,9 +244,6 @@ async function buscarIntegrantes(artistaId) {
     return [...new Set(integrantes)];
 }
 
-// ========================================
-// WIKIPEDIA — IMAGEM
-// ========================================
 
 async function buscarImagem(nomeArtista) {
     const idiomas = ["pt", "en"];
@@ -309,9 +295,6 @@ async function buscarImagem(nomeArtista) {
     return null;
 }
 
-// ========================================
-// WIKIPEDIA / WIKIDATA — DADOS ALTERNATIVOS
-// ========================================
 
 async function buscarDadosWikipedia(nomeArtista) {
     const idiomas = ["pt", "en"];
@@ -348,7 +331,6 @@ async function buscarDadosWikipedia(nomeArtista) {
                 normalizarTexto(item.title) === nomeNormalizado
             ) || paginas[0];
 
-            // Obtém o identificador Wikidata associado ao artigo.
             const parametrosPagina = new URLSearchParams({
                 action: "query",
                 prop: "pageprops",
@@ -378,7 +360,6 @@ async function buscarDadosWikipedia(nomeArtista) {
                 continue;
             }
 
-            // Consulta os dados estruturados do Wikidata.
             const parametrosWikidata = new URLSearchParams({
                 action: "wbgetentities",
                 ids: idWikidata,
@@ -404,14 +385,11 @@ async function buscarDadosWikipedia(nomeArtista) {
 
             const claims = entidade.claims || {};
 
-            // P571 = data de criação/formação.
             const valorAno =
                 claims.P571?.[0]?.mainsnak?.datavalue?.value?.time || "";
 
             const ano = valorAno.match(/(?:18|19|20)\d{2}/)?.[0] || "";
 
-            // P136 = gênero musical.
-            // P527 = componentes/membros, quando cadastrados.
             const idsRelacionados = [
                 ...(claims.P136 || []),
                 ...(claims.P527 || [])
@@ -484,9 +462,6 @@ async function buscarDadosWikipedia(nomeArtista) {
     return null;
 }
 
-// ========================================
-// ITUNES — ÁLBUNS E IMAGENS ALTERNATIVOS
-// ========================================
 
 async function buscarDadosITunes(nomeArtista) {
     const parametrosITunes = new URLSearchParams({
@@ -530,9 +505,6 @@ async function buscarDadosITunes(nomeArtista) {
     return { albuns, imagem };
 }
 
-// ========================================
-// SELEÇÃO DO ARTISTA E FAILSAFE
-// ========================================
 
 async function selecionarArtista(artista) {
     nome.value = artista.name;
@@ -557,21 +529,18 @@ async function selecionarArtista(artista) {
     let integrantes = [];
     let imagemITunes = "";
 
-    // MusicBrainz: álbuns.
     try {
         albuns = await buscarAlbuns(artista.id);
     } catch (erro) {
         console.error("Erro ao buscar álbuns no MusicBrainz:", erro);
     }
 
-    // MusicBrainz: integrantes.
     try {
         integrantes = await buscarIntegrantes(artista.id);
     } catch (erro) {
         console.error("Erro ao buscar integrantes no MusicBrainz:", erro);
     }
 
-    // Wikipedia/Wikidata: preenche apenas o que estiver faltando.
     try {
         const dadosWikipedia = await buscarDadosWikipedia(artista.name);
 
@@ -595,7 +564,6 @@ async function selecionarArtista(artista) {
         console.error("Erro ao consultar Wikipedia/Wikidata:", erro);
     }
 
-    // iTunes: alternativa para álbuns e imagem.
     try {
         const dadosITunes = await buscarDadosITunes(artista.name);
 
@@ -609,11 +577,9 @@ async function selecionarArtista(artista) {
         console.error("Erro ao consultar iTunes:", erro);
     }
 
-    // Atualiza as listas sem apagar dados já encontrados.
     preencherLista(listaAlbuns, "album", albuns);
     preencherLista(listaIntegrantes, "integrante", integrantes);
 
-    // Wikipedia é a fonte principal da imagem; iTunes é a alternativa.
     try {
         const urlImagemWikipedia = await buscarImagem(artista.name);
 
@@ -634,9 +600,6 @@ async function selecionarArtista(artista) {
         `${artista.name}: pesquisa concluída. Confira os dados antes de salvar.`;
 }
 
-// ========================================
-// EVENTOS DA PESQUISA
-// ========================================
 
 botaoPesquisa.addEventListener("click", pesquisarArtistas);
 
@@ -647,9 +610,6 @@ campoPesquisa.addEventListener("keydown", evento => {
     }
 });
 
-// ========================================
-// CADASTRO E EDIÇÃO
-// ========================================
 
 adicionarCampoAutomatico(listaIntegrantes, "integrante");
 adicionarCampoAutomatico(listaAlbuns, "album");
