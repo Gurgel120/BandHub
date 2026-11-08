@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pages/cadastroBanda.css">
+    <script type="module" defer src="../assets/js/script.js"></script>
+    <script type="module" defer src="../assets/js/pages/cadastroBanda.js"></script>
 </head>
 
 <body>
@@ -74,7 +76,7 @@
                         os campos adicionais vazios.
                     </p>
 
-                    <div class="cadastro-banda__lista">
+                    <div class="cadastro-banda__lista" id="integrantes">
                         <div class="cadastro-banda__item">
                             <label for="integrante-1">Integrante 1</label>
                             <input type="text" id="integrante-1" name="integrantes[]" placeholder="Nome do integrante">
@@ -96,7 +98,7 @@
                         Adicione os álbuns lançados pela banda.
                     </p>
 
-                    <div class="cadastro-banda__lista">
+                    <div class="cadastro-banda__lista" id="albuns">
                         <div class="cadastro-banda__item">
                             <label for="album-1">Álbum 1</label>
                             <input type="text" id="album-1" name="albuns[]" placeholder="Nome do álbum">
