@@ -1,4 +1,4 @@
-import { criarHeaderBase } from './components/header-base.js';
+import { criarHeaderBase } from 'components/header-base.js';
 
 const imagemCaminho='public/assets/images/'
 const componentes = document.querySelectorAll('[data-component]');
