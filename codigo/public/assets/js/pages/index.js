@@ -1,11 +1,14 @@
 import { criarCardBase } from "../components/card-base.js";
+import { inicializarBandas } from "../modules/armazenamento.js";
 
-const caminhoJson = "/BandHub/db/db.json";
+const bandas = await inicializarBandas();
 
-const containers = document.querySelectorAll('[data-type]');
+let containerLista = document.querySelector('[data-type="cardContainer"]');
 
-containers.forEach(async (elemento) => {
-    const tipo = elemento.dataset.type;
+const campoPesquisa = document.querySelector("#pesquisa-banda");
+const botaoPesquisa = document.querySelector(".pesquisa-botao");
+const filtroGenero = document.querySelector("#filtro-genero");
+const ordenacao = document.querySelector("#ordenar-bandas");
 
     if (tipo === "cardContainer") {
         try {
